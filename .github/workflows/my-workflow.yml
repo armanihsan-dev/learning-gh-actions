@@ -16,11 +16,5 @@ jobs:
   my-first-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: Check Node Version
-        run: node -v
-      - name: Install Nodejs Version 24
-        uses: actions/setup-node@v6
-        with:
-          node-version: '24'
-      - name: Print Node Version Again
-        run: node -v
+      - name: Check expressions
+        run: echo ${{true}}
