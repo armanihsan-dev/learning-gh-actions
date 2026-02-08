@@ -11,3 +11,5 @@ jobs:
         run: pwd
       - name: CheckOut Repo
         uses: actions/checkout@v6
+      - name: List all files
+        run: ls -la
