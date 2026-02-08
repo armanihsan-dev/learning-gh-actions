@@ -14,8 +14,11 @@ jobs:
   #     - name: List all files
   #       run: ls -la
   my-first-jobs:
+    env:
+      TEST: myTestEnv
+      ACTION_URL: https://github.com/actions/setup-node/actions/runs/21791932831
     runs-on: ubuntu-latest
     steps:
-       - run: echo "${{toJson(env)}}"
-       - run: echo "${{toJson(vars)}}"
-       - run: echo "${{toJson(secrets)}}"
+      - run: echo "${{toJson(env)}}"
+      - run: echo "${{toJson(vars)}}"
+      - run: echo "${{toJson(secrets)}}"
