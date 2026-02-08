@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check expressions
-        run: echo ${{true}}
+        run: echo ${{toJson(github)}}
