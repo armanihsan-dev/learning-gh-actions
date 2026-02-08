@@ -2,14 +2,25 @@ name: my-first-workflow
 
 on: workflow_dispatch
 jobs:
+  # my-first-jobs:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: List all files
+  #       run: ls -la
+  #     - name: Print working directory
+  #       run: pwd
+  #     - name: CheckOut Repo
+  #       uses: actions/checkout@v6
+  #     - name: List all files
+  #       run: ls -la
   my-first-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: List all files
-        run: ls -la
-      - name: Print working directory
-        run: pwd
-      - name: CheckOut Repo
-        uses: actions/checkout@v6
-      - name: List all files
-        run: ls -la
+      - name: Check Node Version
+        run: node -v
+      - name: Install Nodejs Version 24
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Print Node Version Again
+        run: node -v
