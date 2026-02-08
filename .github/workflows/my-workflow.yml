@@ -16,5 +16,6 @@ jobs:
   my-first-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: Check expressions
-        run: echo ${{toJson(github)}}
+       - run: echo "${{toJson(env)}}"
+       - run: echo "${{toJson(vars)}}"
+       - run: echo "${{toJson(secrets)}}"
