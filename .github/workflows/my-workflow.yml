@@ -9,16 +9,5 @@ jobs:
         run: ls -la
       - name: Print working directory
         run: pwd
-      - name: Create Js File
-        run: echo "console.log('Hello World');" > server.js
-      - name: Run server.js file
-        run: node server.js
-
-  my-second-Job:
-    runs-on: ubuntu-latest
-    needs: my-first-jobs
-    steps:
-      - name: Print Nodejs Verion
-        run: node -v
-      - name: Print NPM Version
-        run: npm -v
+      - name: CheckOut Repo
+        uses: actions/checkout@v6
